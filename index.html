@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Session Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Session Timer</h1>
+        <div>
+            <label for="study-hours">Set total study hours:</label>
+            <input type="number" id="study-hours" min="1" max="24">
+            <label for="study-duration">Study duration (minutes):</label>
+            <input type="number" id="study-duration" min="1" max="60" value="50">
+            <label for="break-duration">Break duration (minutes):</label>
+            <input type="number" id="break-duration" min="1" max="60" value="10">
+            <button id="set-hours-btn">Set Times</button>
+        </div>
+        <div id="timer">
+            <span id="time">00:00:00</span>
+        </div>
+        <div id="session-details">
+            <span id="session-info">Session: 0/0</span>
+        </div>
+        <div id="break-timer-container" style="display: none;">
+            <h2>Break Timer</h2>
+            <span id="break-time">00:00</span>
+        </div>
+        <button id="start-btn" disabled>Start</button>
+        <button id="stop-btn" disabled>Stop</button>
+        <audio id="alarm" src="15sec_uber_beep.mp3" preload="auto"></audio>
+        <audio id="background-music" src="Sonder(chosic.com).mp3" loop preload="auto"></audio>
+        
+        <div id="volume-control">
+            <button id="volume-down">Volume Down</button>
+            <span id="volume-level">Volume: 100%</span>
+            <button id="volume-up">Volume Up</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
